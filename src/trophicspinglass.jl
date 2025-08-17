@@ -16,6 +16,7 @@ using JLD2
 using Base.Threads
 
 include("cascade.jl")
+include("cascade_kdiverse.jl")
 include("detectcascade.jl")
 include("nichemodelweb.jl")
 include("plotweb.jl")
@@ -34,6 +35,7 @@ include("analytical_cascade_expressions.jl")
 
 export 
 cascade,
+cascade_kdiverse,
 detectcascade,
 nichemodelweb,
 plotweb,
