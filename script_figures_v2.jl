@@ -1007,7 +1007,7 @@ filename = smartpath("figures_prefinal/fig_cascade_effect_conn.pdf")
 Plots.savefig(p1,filename)
 
 
-ratio = 1 ./ (mean_cascade_ratio[3,:,:] ./ mean_cascade_ratio[1,:,:]);
+ratio = (mean_cascade_ratio[1,:,:]) ./ (mean_cascade_ratio[3,:,:]);
 
 ratioplot = Plots.heatmap(gvec,koutvec,ratio',
     clims=(0.5,1.5),
@@ -1018,7 +1018,7 @@ ratioplot = Plots.heatmap(gvec,koutvec,ratio',
     tickfontsize = 12,    # Font size for axis tick numbers
     colorbar_titlefontsize = 14,
     colorbar_tickfontsize = 12,
-    colorbar_title = L"\mathrm{Cascade~effect~ratio,~}\bar{\psi}_{\rm high}/\bar{\psi}_{\rm low}");
+    colorbar_title = L"\mathrm{Cascade~effect~ratio,~}\bar{\psi}_{\rm low}/\bar{\psi}_{\rm high}");
 
 filename = smartpath("figures_prefinal/fig_cascade_effect_ratio.pdf");
 Plots.savefig(ratioplot,filename)
